@@ -1,1 +1,1 @@
-it is web application which allows user to share their ride journey with others pepole.
+it is web application which allows user to share their ride journey with others people.
