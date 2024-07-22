@@ -7,7 +7,71 @@
         <div class="row home_row">
 
             <div class="col-md-6">
-<p>helo</p>
+
+                <div class="search_div">
+
+                    <h2 class="goHeading">
+                        Go AnyWhere
+                        
+                        <div class="subHeading">
+                            With US
+                        </div>
+                    </h2>
+
+                    <form [formGroup]="homeForm">
+
+
+                    <div class="source form-group source-feild">
+                        <input type="text" placeholder=" Source "  class="input-fieldplaces"
+                        formControlName="Source">
+
+                    </div>
+
+                    <div  class="destination-feild form-group">
+                        <input type="text" placeholder=" Destination " class="input-fieldplaces"
+                        formControlName="Destination">
+
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-md-6">
+                            <div class="feildHeading">
+                                Travelling Date
+                            </div>
+                            <div  class="destination-feild form-group " id="datefeild">
+                                <input type="date" [(ngModel)]="minDate" class="input-fieldplaces"
+                                formControlName="startdate">
+        
+                                
+        
+                            </div>
+                        </div>
+
+                        <div class="col-md-6" >
+ 
+                            <div class="feildHeading" id="pas">
+                                Passeneger Count
+                            </div>
+                            <div  class="destination-feild form-group " id="passengerfeild">
+                                <input type="number"  class="input-fieldplaces passCount"
+                                [(ngModel)]="AdultCount"
+                                formControlName="Adultcount" placeholder="passenger Count">
+        
+                                
+        
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btnRide">
+                            Get Ride
+                        </button>
+
+                    </div>
+                  
+
+                </form>
+                </div>
             </div>
 
             <div class="col-md-6">

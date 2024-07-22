@@ -4,3 +4,104 @@
 .home_row{
     margin-top: 5%;
 }
+
+
+.input-fieldplaces {
+    width: 84%;
+    outline: none;
+    border: none;
+    border-radius: 11px;
+    color: #000088;
+    text-indent: 10px;
+    font-family: "PoopinRegular";
+    margin-top: 14px;
+    position: relative;
+    z-index: 4;
+  }
+
+  
+.destination-feild {
+    height: 53px;
+    border: 1px solid rgba(1, 17, 48, 0.23);
+    border-radius: 11px;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: -2%;
+    background-position: 10px;
+    /* new */
+    background: #ffffff;
+    border: 1px solid #ececec;
+    box-shadow: 0px -2px 4px rgba(195, 195, 195, 0.25),
+      0px 4px 4px rgba(195, 195, 195, 0.25);
+    border-radius: 5px;
+    margin-top: 5%;
+  }
+
+  
+.source-feild {
+    height: 52px;
+    border: 1px solid rgba(1, 17, 48, 0.23);
+    border-radius: 11px;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 3%;
+    background-position: 10px;
+    /*new*/
+    background: #ffffff;
+    border: 1px solid #ececec;
+    box-shadow: 0px -2px 4px rgba(195, 195, 195, 0.25),
+      0px 4px 4px rgba(195, 195, 195, 0.25);
+    border-radius: 5px;
+  }
+  
+  .goHeading{
+    font-family: "PoopinBold";
+    font-size: 23px;
+    text-align: center;
+  }
+
+  .feildHeading{
+    font-family: "PoopinMedium";
+    margin-top: 5%;
+    font-size: 16px;
+    text-align: left;
+    margin-left: 23%;
+  }
+
+  #pas{
+    margin-left: 13%;
+  }
+
+  .subHeading{
+    font-size: 18px;
+    margin-top: 1%;
+    margin-bottom: 3%;
+    margin-left: 13%;
+  }
+
+  #datefeild{
+    width: 70%;
+    margin-left: 21%;
+  }
+
+  #passengerfeild{
+    width: 70%;
+  }
+
+  .btnRide{
+    margin-top: 5%;
+    height: 50px;
+    text-align: center;
+    font-family: "PoopinRegular";
+    width: 60%;
+    border: 3px solid black;
+    margin-left: 20%;
+    background-color: black;
+    color: white;
+  }
+  
+  .passCount{
+    text-align: center;
+  }
+  
+  
