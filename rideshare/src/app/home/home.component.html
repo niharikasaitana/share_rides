@@ -23,14 +23,23 @@
 
                     <div class="source form-group source-feild">
                         <input type="text" placeholder=" Source "  class="input-fieldplaces"
-                        formControlName="Source">
+                        formControlName="Source" (keyup)="searchResult($event,'source')" value = "selectedSource">
+                       
 
                     </div>
+                    <div class="searchTypehead" *ngIf="sourceTouched"> <ul *ngFor="let source of sortedList">
+                        <li (click)=" selectionCall(source,'source')">{{source}}</li>
+                    </ul></div>
 
                     <div  class="destination-feild form-group">
                         <input type="text" placeholder=" Destination " class="input-fieldplaces"
-                        formControlName="Destination">
-
+                        formControlName="Destination"  (keyup)="searchResult($event,'destination')">
+                      
+                    </div>
+                    <div class="searchTypehead" *ngIf="destinationTouched">
+                        <ul *ngFor="let destination of sortedList">
+                            <li (click)=" selectionCall(destination,'destination')">{{destination}}</li>
+                        </ul>
                     </div>
 
                     <div class="row">
@@ -63,7 +72,7 @@
                             </div>
                         </div>
 
-                        <button type="submit" class="btn btnRide">
+                        <button type="submit" class="btn btnRide" [disabled]=this.homeForm.invalid (click)="getRides()">
                             Get Ride
                         </button>
 
