@@ -27,6 +27,7 @@ export class HomeComponent implements OnInit {
       Adultcount: [1, Validators.required],
     });
   }
+  showRides = false;
 
   ngOnInit(): void {
 
@@ -69,8 +70,11 @@ export class HomeComponent implements OnInit {
   }
 
   getRides(){
-    console.log(this.homeForm.value);
-    console.log('get',this.homeForm.valid);
+   
+    if(this.homeForm.valid)
+    {
+        this.showRides = true;
+    }
   }
 
 }
