@@ -123,3 +123,102 @@ li {
   opacity: 0.5;
   cursor: not-allowed;
 }
+
+.ridesCard{
+  background: #ffffff;
+  border: 1px solid #ececec;
+  box-shadow: 0px -2px 4px rgba(195, 195, 195, 0.25), 0px 4px 4px rgba(195, 195, 195, 0.25);
+  border-radius: 5px;
+  font-family: "PoopinMedium";
+  margin-top: 5%;
+}
+
+.ridedeatils{
+  display: flex;
+    justify-content: space-between;
+    margin-top: 4%;
+}
+
+.detailsspan1{
+  margin-left: 3%;
+  width: 10%;
+}
+
+.detailsspan2{
+  margin-right: 5%;
+  color: #000088;
+}
+.calendImg{
+  margin-left: 5%;
+    margin-top: 2%;
+    color: #000088;
+}
+
+.vechileImg{
+  color: black;
+  margin-left: 5%;
+  margin-top: -16%;
+}
+.div_vechiletpe{
+  margin-left: 5%;
+  font-size: 14px;
+  margin-bottom: 2%;
+  font-weight: 600;
+
+}
+.bikevechile{
+  margin-left: 7%;
+  font-size: 14px;
+    margin-left: 6%;
+    margin-bottom: 2%;
+    font-weight: 600;
+
+}
+
+svg{
+  fill:red;
+}
+
+.fliterdiv{
+  display: flex;
+    justify-content: space-between;
+    margin-top: 3%;
+    margin-bottom: 2%;
+}
+
+.selectedfilter{
+  border: none !important;
+    color: #fff !important;
+    background: black !important;
+    font-family: PoopinSemibold !important;
+}
+
+.fliter{
+  height: 50px;
+  font-size: 15px;
+  width: 30%;
+  border: .5px solid black;
+  background: white;
+  color: black;
+  font-family: PoopinMedium;
+  border-radius: 8px;
+}
+
+.direverImg{
+  
+  width: 50px;
+}
+
+.direverName{
+  color:gray;
+}
+
+.starimg{
+  width: 31px;
+    height: 35px;
+}
+
+.star_sapn{
+  float: right;
+  margin-right: 5%;
+}

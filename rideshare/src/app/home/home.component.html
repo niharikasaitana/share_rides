@@ -85,11 +85,59 @@
 
             <div class="col-md-6">
 
-                <img *ngIf="!showRides"  class="search_beside_img" src="https://www.uber-assets.com/image/upload/f_auto,q_auto:eco,c_fill,w_630,h_788/v1684852612/assets/ba/4947c1-b862-400e-9f00-668f4926a4a2/original/Ride-with-Uber.png">
+                <img *ngIf="!showRides"  class="search_beside_img" alt="" src="https://www.uber-assets.com/image/upload/f_auto,q_auto:eco,c_fill,w_630,h_788/v1684852612/assets/ba/4947c1-b862-400e-9f00-668f4926a4a2/original/Ride-with-Uber.png">
 
                 <div *ngIf="showRides">
 
-                    gfd
+                    <div class="fliterdiv">
+
+                        <button type="button" class="fliter" [ngClass]="{' selectedfilter': selectedFliter == 'cheaper' }" (click)="fliter('cheaper')"> cheaper </button>
+                        <button type="button" class="fliter "  [ngClass]="{' selectedfilter': selectedFliter == 'faster' }" (click)="fliter('faster')"> Faster </button>
+                        <button type="button" class="fliter "  [ngClass]="{' selectedfilter': selectedFliter == 'Convenice' }" (click)="fliter('convenice')"> Convenice </button>
+
+                    </div>
+
+                    <div *ngFor="let ride of ridesList" class="ridesCard">
+                        <div class="calendImg">
+                            <img src="../../assets/recentcalendar.svg" alt="">
+                            <span> {{ride.dateTime}} </span>
+                        </div>
+                        <div class="ridedeatils">
+                          
+                            <span class="detailsspan1"> 
+                                <img src="../../assets/Auto.svg" alt="" *ngIf=" ride.vechileType == 'AUTO' " class="vechileImg">
+                                <img src="../../assets/bike.svg" alt="" *ngIf=" ride.vechileType == 'BIKE' " class="vechileImg">
+                                <img src="../../assets/Cab.svg" alt="" *ngIf=" ride.vechileType != 'BIKE' &&  ride.vechileType != 'AUTO' " class="vechileImg">
+                              
+                            </span>
+                           <span> {{ride.Time}} Mins</span>
+                            <span class="detailsspan2"> ₹ {{ride.fare | decmialpipe:2}} </span>
+                        </div>
+                        <hr>
+                        <div *ngIf="  ride.vechileType == 'BIKE'  ||  ride.vechileType == 'AUTO' " class="bikevechile">
+                            {{ride.vechileType}}
+                            <img src="../../assets/driver_black.png" alt="" class="direverImg">
+                          <span class="direverName"> {{ride.driverName | titlecase }}</span> 
+
+                          <span class="star_sapn">
+                            <img src="../../assets/star.png" alt="" class="starimg">
+                            <span class="direverName"> {{ride.rating | decmialpipe:2  }}</span>  
+                          </span>
+                         
+
+                        </div>
+                        <div class="div_vechiletpe" *ngIf="  ride.vechileType != 'BIKE' &&  ride.vechileType != 'AUTO' ">
+                            {{ride.vechileType}} 
+                            <img src="../../assets/driver_black.png" alt="" class="direverImg">
+                            <span class="direverName"> {{ride.driverName | titlecase }}</span>  
+
+                            <span  class="star_sapn">
+                                <img src="../../assets/star.png" alt="" class="starimg">
+                                <span class="direverName"> {{ride.rating | decmialpipe:2  }}</span>
+                            </span>
+  
+                        </div>
+                    </div>
 
                 </div>
             </div>
