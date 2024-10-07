@@ -78,7 +78,7 @@ export class HomeComponent implements OnInit {
   ];
   fliteredList = [];
   ngOnInit(): void {
-
+this.fliter('cheaper');
   }
 
   searchResult(event: KeyboardEvent, feildType: string) {
