@@ -19,6 +19,7 @@ export class HomeComponent implements OnInit {
   selectedDestination: string | null = null;
   sourceTouched: boolean = false;
   destinationTouched: boolean = false;
+  selectedVechileType:string[]=[];
   constructor(private fb: FormBuilder, private datePipe: DatePipe) {
     this.homeForm = this.fb.group({
       Source: ['', Validators.required],
@@ -136,6 +137,18 @@ this.fliter('cheaper');
     else {
       this.selectedFliter = 'Convenice';
       this.ridesList.sort((a,b)=> a.fare - b.fare);
+    }
+  }
+
+  fliterVechiletype(type:string){
+    if(this.selectedVechileType.includes(type))
+    {
+      let index = this.selectedVechileType.indexOf(type);
+      this.selectedVechileType.splice(index,1);
+    }
+    else
+    {
+      this.selectedVechileType.push(type)
     }
   }
 

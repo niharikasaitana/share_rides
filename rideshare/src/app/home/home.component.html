@@ -94,7 +94,14 @@
                         <button type="button" class="fliter" [ngClass]="{' selectedfilter': selectedFliter == 'cheaper' }" (click)="fliter('cheaper')"> cheaper </button>
                         <button type="button" class="fliter "  [ngClass]="{' selectedfilter': selectedFliter == 'faster' }" (click)="fliter('faster')"> Faster </button>
                         <button type="button" class="fliter "  [ngClass]="{' selectedfilter': selectedFliter == 'Convenice' }" (click)="fliter('convenice')"> Convenice </button>
-
+                        <button type="button" class="fliterImg" (click)=" fliterVechiletype('AUTO')" *ngIf="!selectedVechileType.includes('AUTO')"> <img src="../../assets/Auto_fliter.svg" alt=""></button>
+                        <button type="button" class="fliterImg" (click)=" fliterVechiletype('AUTO')" *ngIf="selectedVechileType.includes('AUTO')"> <img src="../../assets/Auto.svg" alt=""></button>
+                        <button type="button" class="fliterImg" (click)=" fliterVechiletype('BIKE')" *ngIf="!selectedVechileType.includes('BIKE')"> <img src="../../assets/Moto_fliter.svg" alt=""></button>
+                        <button type="button" class="fliterImg" (click)=" fliterVechiletype('BIKE')" *ngIf="selectedVechileType.includes('BIKE')"> <img src="../../assets/bike.svg" alt=""></button>
+                        <button type="button" class="fliterImg" (click)=" fliterVechiletype('CAB')" *ngIf="!selectedVechileType.includes('CAB')"> <img src="../../assets/Cab_fliter.svg" alt=""></button>
+                       
+                      
+                        <button type="button" class="fliterImg" (click)=" fliterVechiletype('CAB')" *ngIf="selectedVechileType.includes('CAB')"> <img src="../../assets/Cab.svg" alt=""></button>
                     </div>
 
                     <div *ngFor="let ride of ridesList" class="ridesCard">
