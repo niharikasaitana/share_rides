@@ -123,6 +123,7 @@ this.fliter('cheaper');
 
     if (this.homeForm.valid) {
       this.showRides = true;
+      localStorage.setItem('placeDetails',JSON.stringify(this.homeForm.value));
     }
   }
 

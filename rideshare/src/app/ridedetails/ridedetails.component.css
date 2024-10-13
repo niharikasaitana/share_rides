@@ -123,3 +123,7 @@ hr{
     height: 550px;
   }
 
+  .backbtn{
+    cursor: pointer;
+  }
+
