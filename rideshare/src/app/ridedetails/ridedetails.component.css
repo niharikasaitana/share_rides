@@ -127,3 +127,18 @@ hr{
     cursor: pointer;
   }
 
+  .popupmain_div{
+    text-align: center;
+  }
+
+  .popupheading{
+    font-family: "PoopinBold";
+    margin-top: 2%;
+  }
+
+  .popupsubHeading{
+    font-family: "PoopinRegular";
+    color: #898989;
+    font-size: 10px;
+  }
+
