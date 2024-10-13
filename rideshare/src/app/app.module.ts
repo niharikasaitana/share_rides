@@ -8,6 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { DatePipe } from '@angular/common';
 import { DecmialpipePipe } from './pipes/decmialpipe.pipe';
+import { RidedetailsComponent } from './ridedetails/ridedetails.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { DecmialpipePipe } from './pipes/decmialpipe.pipe';
     LoginComponent,
     HomeComponent,
     NavbarComponent,
-    DecmialpipePipe
+    DecmialpipePipe,
+    RidedetailsComponent
   ],
   imports: [
     BrowserModule,

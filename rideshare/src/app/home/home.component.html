@@ -104,7 +104,7 @@
                         <button type="button" class="fliterImg" (click)=" fliterVechiletype('CAB')" *ngIf="selectedVechileType.includes('CAB')"> <img src="../../assets/Cab.svg" alt=""></button>
                     </div>
 
-                    <div *ngFor="let ride of ridesList" class="ridesCard">
+                    <div *ngFor="let ride of ridesList;let index = index" class="ridesCard" (click)="ridedeatils(index)">
                         <div class="calendImg">
                             <img src="../../assets/recentcalendar.svg" alt="">
                             <span> {{ride.dateTime}} </span>

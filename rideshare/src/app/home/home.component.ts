@@ -1,6 +1,7 @@
 import { DatePipe } from '@angular/common';
 import { Component, MissingTranslationStrategy, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -20,7 +21,7 @@ export class HomeComponent implements OnInit {
   sourceTouched: boolean = false;
   destinationTouched: boolean = false;
   selectedVechileType:string[]=[];
-  constructor(private fb: FormBuilder, private datePipe: DatePipe) {
+  constructor(private fb: FormBuilder, private datePipe: DatePipe, private router: Router) {
     this.homeForm = this.fb.group({
       Source: ['', Validators.required],
       Destination: ['', Validators.required],
@@ -29,7 +30,7 @@ export class HomeComponent implements OnInit {
       Adultcount: [1, Validators.required],
     });
   }
-  showRides = true;
+  showRides = false;
   ridesList = [
     {
       vechileType: 'AUTO',
@@ -150,6 +151,11 @@ this.fliter('cheaper');
     {
       this.selectedVechileType.push(type)
     }
+  }
+
+  ridedeatils(index: number){
+    localStorage.setItem('rideDetails', JSON.stringify(this.ridesList[index]));
+    this.router.navigateByUrl('ridedetails');
   }
 
 }
