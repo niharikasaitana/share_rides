@@ -37,8 +37,8 @@
                     <div class="fareheading_div">
                         <span class="fareHeading"> fare </span>
                         <span class="fare">  ₹ {{ ridedeatils.fare | decmialpipe:2}} 
-                            <img src="../../assets/Whitedown_arrow.svg" alt="" class="arrowImg" *ngIf="!showbreakup" (click)="showbreakup= true">
-                            <img src="../../assets/Whiteup_arrow.svg" alt="" class="arrowImg" *ngIf="showbreakup" (click)="showbreakup= false">
+                            <img src="../../assets/Whitedown_arrow.svg" alt="" class="arrowImg backbtn" *ngIf="!showbreakup" (click)="showbreakup= true">
+                            <img src="../../assets/Whiteup_arrow.svg" alt="" class="arrowImg backbtn" *ngIf="showbreakup" (click)="showbreakup= false">
                         </span>
                     </div>
                     <div *ngIf="showbreakup">
