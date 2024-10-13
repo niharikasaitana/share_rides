@@ -1,1 +1,80 @@
-<p>ridedetails works!</p>
+<div class="main_div">
+    <app-navbar></app-navbar>
+    
+    <div class="container">
+
+        <div class="row home_row">
+
+            <div class="col-md-6">
+                <div>
+                    <img src="../../assets/backarrow.png" alt="">
+                </div>
+               
+
+                <div class="imgDetails"> 
+                    <img src="../../assets/Auto.svg" alt="" class="vechileImg" >
+                    <span class="detailsVechileType"> AUTO
+                        <div class="durationVechile"> 120 mins </div>
+                         </span>
+                </div>
+
+                <div class="placeDetails">
+                    <div> 
+                        <span class="placesHeading"> pickup </span>
+                        <span class="pickupPlaces"> Hyderabdad</span>
+                    </div>
+                    <div class="drop_div"> 
+                        <span class="placesHeading"> Drop </span>
+                        <span class="pickupPlaces" id="dropplace"> Hyderabdad</span>
+                    </div>
+                </div>
+
+                <div class="fare_div">
+
+                    <div class="fareheading_div">
+                        <span class="fareHeading"> fare </span>
+                        <span class="fare">  ₹ {{1800 | decmialpipe:2}} 
+                            <img src="../../assets/Whitedown_arrow.svg" alt="" class="arrowImg" *ngIf="!showbreakup" (click)="showbreakup= true">
+                            <img src="../../assets/Whiteup_arrow.svg" alt="" class="arrowImg" *ngIf="showbreakup" (click)="showbreakup= false">
+                        </span>
+                    </div>
+                    <div *ngIf="showbreakup">
+                        <div class="farebreakup_div">
+                            <span class="farebreakup_heading">Base Fare</span>
+                            <span class="farebreakup"> ₹ {{1800 | decmialpipe:2}} </span>
+                        </div>
+                        <div class="farebreakup_div">
+                            <span class="farebreakup_heading" >Tax & Sub Charges</span>
+                            <span class="farebreakup" > ₹ {{1800 | decmialpipe:2}} </span>
+                        </div>
+                        <div class="farebreakup_div">
+                            <span  class="farebreakup_heading">Platform Fee</span>
+                            <span class="farebreakup" > ₹ {{1800 | decmialpipe:2}} </span>
+                        </div>
+                        <hr>
+                        <div class="farebreakup_div" id="totalfare">
+                            <span  class="farebreakup_heading" >Total</span>
+                            <span class="farebreakup" > ₹ {{1800 | decmialpipe:2}} </span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div>
+                    <button type="button" class="btn btnRide"  (click)="bookRide()">
+                        Book Ride
+                    </button>
+                </div>
+
+
+
+            </div>
+
+            <div class="col-md-6">
+
+                <img   class="search_beside_img" alt="" src="https://www.uber-assets.com/image/upload/f_auto,q_auto:eco,c_fill,w_630,h_788/v1684852612/assets/ba/4947c1-b862-400e-9f00-668f4926a4a2/original/Ride-with-Uber.png">
+            </div>
+            
+        </div>
+    </div>        
+</div>    

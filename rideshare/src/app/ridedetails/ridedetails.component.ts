@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RidedetailsComponent implements OnInit {
 
+  showbreakup = false;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  bookRide(){
+    
   }
 
 }
