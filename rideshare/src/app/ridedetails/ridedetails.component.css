@@ -142,3 +142,30 @@ hr{
     font-size: 10px;
   }
 
+  .input-fieldplaces {
+    outline: none;
+    border-radius: 5px;
+    color: #000088;
+    text-indent: 10px;
+    font-family: "PoopinRegular";
+    z-index: 4;
+    margin-top: 5%;
+    margin-bottom: 2%;
+  }
+
+  .input-fieldplaces ::placeholder{
+    font-size: 9px;
+    font-family: "PoopinRegular";
+  }
+
+  .text-danger {
+    font-family: "PoopinSemibold";
+    font-size: 14px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+  }
+
+ #popupBtn{
+    margin-left: 0%;
+    margin-bottom: 5%;
+ }

@@ -91,9 +91,37 @@
               <div class="popupsubHeading">
                 A 4-digit OTP will be sent on SMS
               </div>
-              <div>
-                <input class="">
+              <form [formGroup]="loginForm">
+
+                <div class="form-group">
+
+                    <input formControlName="loginNumber" type="text" (keypress)="keyPress($event)"(keydown)="Continue($event)" class="input-fieldplaces" placeholder="Enter Number">
+
+                </div>
+
+                <div
+                class="text-danger"
+                *ngIf="
+                this.loginForm.controls['loginNumber'].invalid
+                &&
+                this.loginForm.controls['loginNumber'].touched
+                "
+              >
+                Enter valid 10-digit Number
               </div>
+
+              <div class="form-group" *ngIf="otpSend">
+                <input type="text" formControlName="otp" placeholder="Enter OTP" class="input-fieldplaces">
+           </div>
+
+               <button type="button" class="btn btnRide" [disabled]="this.loginForm.controls['loginNumber'].invalid" id="popupBtn" (click)="otpSend=true" *ngIf="!otpSend">
+                   Send OTP
+               </button>
+               <button type="button" class="btn btnRide" [disabled]="this.loginForm.controls['loginNumber'].invalid" id="popupBtn" (click)="otpSend=true" *ngIf="otpSend">
+                Register
+            </button>
+
+              </form>
         </div>
       
     </div>
