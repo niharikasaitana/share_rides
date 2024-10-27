@@ -13,8 +13,46 @@
      <span class="second_shipment" > Shipments </span>
      <span class="second_search" routerLink="/home" > search </span>
      <span class="second_ride" > publish Ride </span>
-     <span></span>
+     
     </span>
+    <img src="../../assets/avatar.png" alt="" id="log_img_profile" class=" log_img" [class.navdisable]="sidebarShow" (click)="opensettings()">
 
 </div>
+
+<!-- profile side bar-->
+
+<div [class.nav-bars]="sidebarShow">
+  <div class="sidebar-slider" [class.sidebar-slide-in]="sidebarShow">
+
+      <br>
+      <div class="sidebar-content">
+          <div class="sidebar-close" (click)="sidebarShow = !sidebarShow">
+              <span class=" "><img src="https://outpath.travel/assets/cross.svg" alt="new" class="cross" loading="lazy"></span>
+          </div>
+          <div class="row bgcolor ">
+              <div class="imagetumb">
+                  <img src="../../assets/avatar.png" alt="" loading="lazy" class="imgava" />
+              </div>
+            
+             <span class="name">Niharika saitana</span>
+              <span class="name">niharikasaitana.gmail.com</span>
+              <span class="phone">8639890428</span>
+              <span class="phone"></span>
+          </div><br>
+          <div class="">
+          <div class="row  ">
+              <div class="col-md-6 card   ">
+                  <a (click)="myride()">
+                      
+                      <span class="menu">My Rides</span>
+                  </a>
+              </div>
+              
+          </div>
+          
+          </div>
+      </div>
+  </div>
+</div>  
+
 </div>
