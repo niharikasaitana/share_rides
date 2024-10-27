@@ -169,3 +169,20 @@ hr{
     margin-left: 0%;
     margin-bottom: 5%;
  }
+
+ .img_success{
+    margin-top: 5%;
+ }
+
+ .btnRidepopup{
+    margin-top: 4%;
+    border-radius: 5px;
+    height: 50px;
+    margin-left: 1%;
+    text-align: center;
+    font-family: "PoopinRegular";
+    background-color: black;
+    color: white;
+    width: 42%;
+    margin-bottom: 4%;
+ }

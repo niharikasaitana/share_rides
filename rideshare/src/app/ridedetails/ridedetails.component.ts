@@ -1,6 +1,7 @@
 import { Component, OnInit,TemplateRef, ViewChild  } from '@angular/core';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-ridedetails',
@@ -14,6 +15,8 @@ export class RidedetailsComponent implements OnInit {
   placedeatils:any={};
   @ViewChild('template')
   public template!: TemplateRef<any>;
+  @ViewChild('sucessTemplate')
+  public sucessTemplate!: TemplateRef<any>;
   numberFailed=false;
   otpSend = false;
   modalRef!: BsModalRef;
@@ -27,7 +30,7 @@ export class RidedetailsComponent implements OnInit {
     class: 'modal-dialog-centered',
   };
 
-  constructor(private modalService: BsModalService,private fb: FormBuilder,) { 
+  constructor(private modalService: BsModalService,private fb: FormBuilder,private router: Router) { 
     this.loginForm = this.fb.group({
       loginNumber: ['', [Validators.required,Validators.maxLength(10),Validators.minLength(10),Validators.pattern(/^[6-9][0-9]{9}$/)]],
       otp : ['', [Validators.required,Validators.pattern(/^[0-9]{4}$/)]],
@@ -51,12 +54,18 @@ export class RidedetailsComponent implements OnInit {
       this.openmodal(this.template);
     }
     else{
-      
+          this.openmodal(this.sucessTemplate);
     }
+
   }
 
   openmodal(template: TemplateRef<any>) {
     this.modalRef = this.modalService.show(template, this.config);
+  }
+
+  closeBook(){
+    this.modalclose();
+    this.router.navigateByUrl('myrides');
   }
 
   modalclose() {
