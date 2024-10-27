@@ -27,6 +27,20 @@ export class NavbarComponent implements OnInit {
     this.sidebarShow = !this.sidebarShow;
   }
 
+  publishride(){
+    this.router.navigate(['publishride']);
+  }
+
+  shipments(){
+    this.router.navigate(['shippments']);
+  }
+
+  ssearcShipments(){
+    this.router.navigate(['searchdelievry']);
+  }
+
+  
+
   loginDataRetrive() {
     const storedData = localStorage.getItem('loginDetails');
 

@@ -168,7 +168,7 @@
   .hour {
     width: 106px;
     height: 40px;
-    background: #eb9f0b;
+    background: black;
     box-shadow: 0 2px 4px #7c7c7c1c;
     border-radius: 10px;
     font-size: 12px;
@@ -183,6 +183,7 @@
     margin-top: 1%;
     font-family: 'Poopinregular';
   }
+  
   .datesearch {
     width: 79px;
       height: 35px;

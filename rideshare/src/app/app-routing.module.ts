@@ -4,6 +4,9 @@ import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { RidedetailsComponent } from './ridedetails/ridedetails.component';
 import { RidesComponent } from './rides/rides.component';
+import { PublishrideComponent } from './publishride/publishride.component';
+import { ShipmentsComponent } from './shipments/shipments.component';
+import { SearchdeliveryComponent } from './searchdelivery/searchdelivery.component';
 
 
 const routes: Routes = [
@@ -11,6 +14,9 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'ridedetails', component: RidedetailsComponent},
   {path: 'myrides', component: RidesComponent},
+  { path: 'publishride', component: PublishrideComponent},
+  { path:'shippments', component: ShipmentsComponent},
+  { path :'searchdelievry', component: SearchdeliveryComponent},
   { path: '**', redirectTo: '', pathMatch: 'full' }
 ];
 

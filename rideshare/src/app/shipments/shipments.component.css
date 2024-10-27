@@ -1,0 +1,303 @@
+.search_beside_img {
+    height: 550px;
+  }
+  
+  .home_row {
+    margin-top: 5%;
+  }
+  
+  
+  .input-fieldplaces {
+    width: 84%;
+    outline: none;
+    border: none;
+    border-radius: 11px;
+    color: #000088;
+    text-indent: 10px;
+    font-family: "PoopinRegular";
+    margin-top: 14px;
+    position: relative;
+    z-index: 4;
+  }
+  
+  
+  .destination-feild {
+    height: 53px;
+    border: 1px solid rgba(1, 17, 48, 0.23);
+    border-radius: 11px;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: -2%;
+    background-position: 10px;
+    /* new */
+    background: #ffffff;
+    border: 1px solid #ececec;
+    box-shadow: 0px -2px 4px rgba(195, 195, 195, 0.25),
+      0px 4px 4px rgba(195, 195, 195, 0.25);
+    border-radius: 5px;
+    margin-top: 5%;
+  }
+  
+  
+  .source-feild {
+    height: 52px;
+    border: 1px solid rgba(1, 17, 48, 0.23);
+    border-radius: 11px;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 3%;
+    background-position: 10px;
+    /*new*/
+    background: #ffffff;
+    border: 1px solid #ececec;
+    box-shadow: 0px -2px 4px rgba(195, 195, 195, 0.25),
+      0px 4px 4px rgba(195, 195, 195, 0.25);
+    border-radius: 5px;
+  }
+  
+  .goHeading {
+    font-family: "PoopinBold";
+    font-size: 23px;
+    text-align: center;
+  }
+  
+  .feildHeading {
+    font-family: "PoopinMedium";
+    margin-top: 5%;
+    font-size: 16px;
+    text-align: left;
+    margin-left: 23%;
+  }
+  
+  #pas {
+    margin-left: 13%;
+  }
+  
+  .subHeading {
+    font-size: 18px;
+    margin-top: 1%;
+    margin-bottom: 3%;
+    margin-left: 13%;
+  }
+  
+  #datefeild {
+    width: 70%;
+    margin-left: 21%;
+  }
+  
+  #passengerfeild {
+    width: 70%;
+  }
+  
+  .btnRide {
+    margin-top: 5%;
+    height: 50px;
+    text-align: center;
+    font-family: "PoopinRegular";
+    width: 60%;
+    border: 3px solid black;
+    margin-left: 20%;
+    background-color: black;
+    color: white;
+  }
+  
+  .passCount {
+    text-align: center;
+  }
+  
+  .searchTypehead {
+    width: 27%;
+    margin-left: 3.25%;
+    background: #d3d3d3f7;
+    max-height: 250px;
+    position: absolute;
+    z-index: 5;
+    overflow-y: scroll;
+  }
+  
+  li {
+    cursor: pointer;
+  }
+  
+  .btnRide:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .ridesCard {
+    background: #ffffff;
+    border: 1px solid #ececec;
+    box-shadow: 0px -2px 4px rgba(195, 195, 195, 0.25), 0px 4px 4px rgba(195, 195, 195, 0.25);
+    border-radius: 5px;
+    font-family: "PoopinMedium";
+    margin-top: 5%;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .ridesCard:hover {
+    border: 1px solid black;
+    transform: scale(1.05) translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .ridedeatils {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4%;
+  }
+  
+  .detailsspan1 {
+    margin-left: 3%;
+    width: 10%;
+  }
+  
+  .detailsspan2 {
+    margin-right: 5%;
+    color: #000088;
+  }
+  
+  .calendImg {
+    margin-left: 5%;
+    margin-top: 2%;
+    color: #000088;
+  }
+  
+  .vechileImg {
+    color: black;
+    margin-left: 5%;
+    margin-top: -16%;
+  }
+  
+  .div_vechiletpe {
+    margin-left: 5%;
+    font-size: 14px;
+    margin-bottom: 2%;
+    font-weight: 600;
+  
+  }
+  
+  .bikevechile {
+    margin-left: 7%;
+    font-size: 14px;
+    margin-left: 6%;
+    margin-bottom: 2%;
+    font-weight: 600;
+  
+  }
+  
+  svg {
+    fill: red;
+  }
+  
+  .fliterdiv {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3%;
+    margin-bottom: 2%;
+  }
+  
+  .selectedfilter {
+    border: none !important;
+    color: #fff !important;
+    background: black !important;
+    font-family: PoopinSemibold !important;
+  }
+  
+  .fliter {
+    height: 50px;
+    font-size: 15px;
+    width: 18%;
+    border: .5px solid black;
+    background: white;
+    color: black;
+    font-family: PoopinMedium;
+    border-radius: 8px;
+  }
+  
+  .direverImg {
+  
+    width: 50px;
+  }
+  
+  .direverName {
+    color: gray;
+  }
+  
+  .starimg {
+    width: 31px;
+    height: 35px;
+  }
+  
+  .star_sapn {
+    float: right;
+    margin-right: 5%;
+  }
+  
+  .fliterImg {
+    background: white;
+    border: 1px solid black;
+    border-radius: 10px;
+  }
+  #fareHeading{
+    margin-left: 10%;
+  }
+  /* pop-ups */
+
+  .popupmain_div{
+    text-align: center;
+  }
+
+  .popupheading{
+    font-family: "PoopinBold";
+    margin-top: 2%;
+  }
+
+  .popupsubHeading{
+    font-family: "PoopinRegular";
+    color: #898989;
+    font-size: 10px;
+  }
+
+  #popupBtn{
+    margin-left: 0%;
+    margin-bottom: 5%;
+ }
+
+ .img_success{
+    margin-top: 5%;
+ }
+
+ .btnRidepopup{
+    margin-top: 4%;
+    border-radius: 5px;
+    height: 50px;
+    margin-left: 1%;
+    text-align: center;
+    font-family: "PoopinRegular";
+    background-color: black;
+    color: white;
+    width: 42%;
+    margin-bottom: 4%;
+ }
+
+ .popup-input-fieldplaces {
+  outline: none;
+  border-radius: 5px;
+  color: #000088;
+  text-indent: 10px;
+  font-family: "PoopinRegular";
+  z-index: 4;
+  margin-top: 5%;
+  margin-bottom: 2%;
+}
+
+.popup-input-fieldplaces ::placeholder{
+  font-size: 9px;
+  font-family: "PoopinRegular";
+}
+
+#deliveryheading{
+  margin-left: 10%;
+
+}

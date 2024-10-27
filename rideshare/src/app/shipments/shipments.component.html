@@ -1,0 +1,220 @@
+
+<div class="main_div">
+    <app-navbar></app-navbar>
+
+    <div class="container">
+
+        <div class="row home_row">
+
+            <div class="col-md-6">
+
+                <div class="search_div">
+
+                    <h2 class="goHeading">
+                        Boost Your Business with 
+                        <!-- "Ship with us for reliable delivery of your orders! -->
+                        <div class="subHeading">
+                            Our Smart Delivery Network 
+                        </div>
+                    </h2>
+
+                    <form [formGroup]="homeForm">
+
+
+                    <div class="source form-group source-feild">
+                        <input type="text" placeholder=" Source "  class="input-fieldplaces"
+                        formControlName="Source" (keyup)="searchResult($event,'source')" value = "selectedSource">
+                       
+
+                    </div>
+                    <div class="searchTypehead" *ngIf="sourceTouched"> <ul *ngFor="let source of sortedList">
+                        <li (click)=" selectionCall(source,'source')">{{source}}</li>
+                    </ul></div>
+
+                    <div  class="destination-feild form-group">
+                        <input type="text" placeholder=" Destination " class="input-fieldplaces"
+                        formControlName="Destination"  (keyup)="searchResult($event,'destination')">
+                      
+                    </div>
+                    <div class="searchTypehead" *ngIf="destinationTouched">
+                        <ul *ngFor="let destination of sortedList">
+                            <li (click)=" selectionCall(destination,'destination')">{{destination}}</li>
+                        </ul>
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-md-6">
+                            <div class="feildHeading">
+                                Travelling Date
+                            </div>
+                            <div  class="destination-feild form-group " id="datefeild">
+                                <input type="date" [(ngModel)]="minDate" class="input-fieldplaces"
+                                formControlName="startdate">
+        
+                                
+        
+                            </div>
+                        </div>
+
+                        <div class="col-md-6" >
+ 
+                           
+
+                            <div class="feildHeading" id="pas">
+                                Shipment Fare
+                            </div>
+                            <div  class="destination-feild form-group " id="passengerfeild">
+                                <input type="number"  class="input-fieldplaces passCount"
+                                formControlName="shiepmentprice">
+        
+                                
+        
+                            </div>
+                        </div>
+
+
+                        
+
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-md-6">
+
+                            <div class="feildHeading" >
+                                vechile Type
+                            </div>
+                                <select  formControlName="vechileType" class="destination-feild form-group " id="datefeild">
+                                    <option *ngFor="let option of vechilesList" [value]="option">{{ option }}</option>
+                                  </select>
+                            
+                        </div>
+
+                        <div class="col-md-6" >
+ 
+                            <div class="feildHeading" id="deliveryheading">
+                                Delivery Weight 
+                                <span *ngIf = " this.homeForm.get('vechileType')?.value == 'Bike' || this.homeForm.get('vechileType')?.value == 'Cab' || this.homeForm.get('vechileType')?.value == 'Auto'  "> - Kgs </span>
+                                <span *ngIf = " this.homeForm.get('vechileType')?.value == 'Lorry (Units)' "> - Units </span>
+                                <span *ngIf = " this.homeForm.get('vechileType')?.value == 'Lorry (Tons)' "> - Tons </span>
+                                <span *ngIf = " this.homeForm.get('vechileType')?.value == 'Lorry (Tyre Type)' "> - Tyre Type </span>
+                            </div>
+                            <div  class="destination-feild form-group " id="passengerfeild">
+                                <input type="number"  class="input-fieldplaces"
+                                formControlName="deliveryWight">
+        
+                                
+        
+                            </div>
+        
+                                
+        
+                        </div>
+
+
+                        
+
+                    </div>
+
+                    <button type="submit" class="btn btnRide" [disabled]=this.homeForm.invalid (click)="publishRides()">
+                        Publish Delivery Services
+                    </button>
+
+                    <div>
+                        
+                    </div>
+                  
+
+                </form>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+
+              <img   class="search_beside_img" alt="" src="../../assets/delievry_man.png"> 
+              <!--  <img src="https://d3i4yxtzktqr9n.cloudfront.net/web-plan/c824e49b7d43abd5.jpg" class="search_beside_img" alt=""> -->
+
+               
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<ng-template #template class="myClass">
+    <div class="modal-content custom">
+        <div class="popupmain_div">
+            <div class="popupheading">
+                Enter your mobile number
+            </div>
+            <div class="popupsubHeading">
+                A 4-digit OTP will be sent on SMS
+            </div>
+            <form [formGroup]="loginForm">
+
+                <div class="form-group">
+
+                    <input formControlName="loginNumber" type="text" (keypress)="keyPress($event)"
+                        (keydown)="Continue($event)" class="popup-input-fieldplaces" placeholder="Enter Number">
+
+                </div>
+
+                <div class="text-danger" *ngIf="
+                this.loginForm.controls['loginNumber'].invalid
+                &&
+                this.loginForm.controls['loginNumber'].touched
+                ">
+                    Enter valid 10-digit Number
+                </div>
+
+                <div class="form-group" *ngIf="otpSend">
+                    <input type="text" formControlName="otp" placeholder="Enter OTP" class="popup-input-fieldplaces">
+                </div>
+
+                <div class="form-group" *ngIf="register">
+                    <input type="text" formControlName="firstName" placeholder="Enter First Name" class="popup-input-fieldplaces">
+                </div>
+
+                <div class="form-group" *ngIf="register">
+                    <input type="text" formControlName="lastName" placeholder="Enter Last Name" class="popup-input-fieldplaces">
+                </div>
+
+                <button type="button" class="btn btnRide" [disabled]="this.loginForm.controls['loginNumber'].invalid"
+                    id="popupBtn" (click)="otpSend=true" *ngIf="!otpSend">
+                    Send OTP
+                </button>
+                <button type="button" class="btn btnRide" [disabled]="this.loginForm.controls['loginNumber'].invalid"
+                    id="popupBtn" (click)="registercal()" *ngIf="otpSend || register">
+                    <span  *ngIf="!register">  Register </span>
+                    <span  *ngIf="register" (click)="login()" >  Login </span>
+                   
+                </button>
+
+            </form>
+        </div>
+
+    </div>
+</ng-template>
+
+<ng-template #sucessTemplate class="myClass">
+    <div class="modal-content custom">
+        <div class="popupmain_div">
+            <div class="popupheading">
+                Published Ride successfully
+            </div>
+            <div class="popupsubHeading">
+                <div class="img_success">
+                     <img src="../../assets/Success.svg" class="paymentimg" alt="">
+                </div>
+            </div>
+
+            <button type="button" (click)="closeBook()" class="btnRidepopup"> OK </button>
+            
+        </div>
+
+    </div>
+</ng-template>
+

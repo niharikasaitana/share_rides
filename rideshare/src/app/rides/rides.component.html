@@ -8,7 +8,8 @@
                     loading="lazy" (click)="backbutton()" /><span class="headding">My Rides</span></a>
             <div class="row" *ngIf="currentdata.length > 0">
                 <br>
-                <div class="col-md-6" *ngFor="let item of currentdata ; let i = index">
+                <div class="col-md-6"> 
+                <div  *ngFor="let item of currentdata ; let i = index">
                     <div class="divcard">
                         <div class="header"> {{ journeydata[i].vechileType }} Service</div>
                         <div class="row journycell">
@@ -53,6 +54,112 @@
                                 <div class="col-4">
                                     <button class="hour" [disabled]="item.status == '' || item.status == 'Pending'">
                                         Booked
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+           
+                <ng-container *ngFor = "let item of publishRides">
+                    <div class="divcard">
+                        <div class="header"> {{ item.vechileType }} Service</div>
+                        <div class="row journycell">
+                            <div class="col-12">
+                                <p class="route">
+                                    {{ item.Source }} <span class="to"> To </span>
+                                    {{ item.Destination }}
+                                </p>
+                                <p class="date">
+                                    <img src="https://outpath.travel/assets/ridedate.svg" class="infanticons" alt="line"
+                                        loading="lazy" />
+                                    {{ item.startdate                                        
+                                    }}<span class="fare">&#8377; {{ item.fareprice |number : '2.2' }}</span>
+                                </p>
+                                <br />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="infants">
+                                <img src="https://outpath.travel/assets/rideadult.svg" class="infanticons" alt="line"
+                                    loading="lazy" />&nbsp;0{{
+                                item.Adultcount
+                                }}
+                                Passengers
+                            </div>
+                            
+                        </div>
+                        <div class="row top-padding">
+                            <div class="col-2">
+                                <div class="right leftcss semicircleborder"></div>
+                            </div>
+                            <div class="col-8 infants">
+                            </div>
+                            <div class="col-2 left">
+                                <div class="left rightcss semicircleborder"></div>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="share_button">
+                            <div class="row">
+                                <div class="col-8"></div>
+                                <div class="col-4">
+                                    <button class="hour" [disabled]="item.status == '' || item.status == 'Pending'">
+                                        Published Ride
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </ng-container>
+
+            </div>
+            <div class="col-md-6"> 
+                <div  *ngFor="let item of  deliveryservices ; let i = index">
+                    <div class="divcard">
+                        <div class="header"> {{ item.vechileType }} Service</div>
+                        <div class="row journycell">
+                            <div class="col-12">
+                                <p class="route">
+                                    {{ item.Source }} <span class="to"> To </span>
+                                    {{ item.Destination }}
+                                </p>
+                                <p class="date">
+                                    <img src="https://outpath.travel/assets/ridedate.svg" class="infanticons" alt="line"
+                                        loading="lazy" />
+                                    {{ item.startdate                                        
+                                    }}<span class="fare">&#8377; {{ item.shiepmentprice | number : '2.2' }}</span>
+                                </p>
+                                <br />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="infants">
+                                <img src="https://outpath.travel/assets/rideadult.svg" class="infanticons" alt="line"
+                                    loading="lazy" />&nbsp;0{{
+                                item.Adultcount
+                                }}
+                                Passengers
+                            </div>
+                            
+                        </div>
+                        <div class="row top-padding">
+                            <div class="col-2">
+                                <div class="right leftcss semicircleborder"></div>
+                            </div>
+                            <div class="col-8 infants">
+                            </div>
+                            <div class="col-2 left">
+                                <div class="left rightcss semicircleborder"></div>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="share_button">
+                            <div class="row">
+                                <div class="col-8"></div>
+                                <div class="col-4">
+                                    <button class="hour" [disabled]="item.status == '' || item.status == 'Pending'" style="width: 85%;">
+                                        Published Delivery Services
                                     </button>
                                 </div>
                             </div>
