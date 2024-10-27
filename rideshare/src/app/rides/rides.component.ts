@@ -9,6 +9,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class RidesComponent implements OnInit {
 
   currentdata : any = [];
+  journeydata:any = [];
   constructor(private router: Router) { }
 
   ngOnInit( ): void {
@@ -21,7 +22,10 @@ export class RidesComponent implements OnInit {
 
   dataRetrive(){
     let ridedata = JSON.parse(localStorage.getItem('placeDetails') || '{}');
+    let jdata = JSON.parse(localStorage.getItem('rideDetails') || '{}');
     this.currentdata.push(ridedata);
+    this.journeydata.push(jdata);
+    console.log(this.currentdata);
   }
 
 }

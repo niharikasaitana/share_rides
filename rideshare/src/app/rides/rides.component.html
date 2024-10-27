@@ -6,24 +6,22 @@
             <br />
             <a class="backbuttonatag"><img src="https://outpath.travel/assets/backarrowN.svg" class="backarrow" alt=""
                     loading="lazy" (click)="backbutton()" /><span class="headding">My Rides</span></a>
-            <div class="row" *ngIf="currentdata.rides?.length > 0">
+            <div class="row" *ngIf="currentdata.length > 0">
+                <br>
                 <div class="col-md-6" *ngFor="let item of currentdata ; let i = index">
                     <div class="divcard">
-
-
-                        <div class="header">City Service</div>
+                        <div class="header"> {{ journeydata[i].vechileType }} Service</div>
                         <div class="row journycell">
                             <div class="col-12">
                                 <p class="route">
-                                    {{ item.startLocation }} <span class="to"> To </span>
-                                    {{ item.endLocation }}
+                                    {{ item.Source }} <span class="to"> To </span>
+                                    {{ item.Destination }}
                                 </p>
                                 <p class="date">
                                     <img src="https://outpath.travel/assets/ridedate.svg" class="infanticons" alt="line"
                                         loading="lazy" />
-                                    {{ item.journeyDatetime | date : "dd-MM-yyyy" }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{
-                                    item.journeyDatetime | date : "hh:mm"
-                                    }} <span class="fare">&#8377; {{ item.totalFareAmount|number : '2.2' }}</span>
+                                    {{ journeydata[i].dateTime
+                                    }}<span class="fare">&#8377; {{ journeydata[i].fare |number : '2.2' }}</span>
                                 </p>
                                 <br />
                             </div>
@@ -32,18 +30,11 @@
                             <div class="infants">
                                 <img src="https://outpath.travel/assets/rideadult.svg" class="infanticons" alt="line"
                                     loading="lazy" />&nbsp;0{{
-                                item.numberOfAdultPassengers + item.numberOfChildPassengers}}
+                                item.Adultcount
+                                }}
                                 Passengers
                             </div>
-                            <p class="code_paid">Status :
-                                <span *ngIf=" item.status != 'Booked' "
-                                    [ngClass]="{'TD_statuscolor': item.status == 'Booked', 'TD_statuscolor_red': item.status == 'Cancelled'||item.status == 'PENDING' ||item.status == 'Pending' || item.status == 'PAYMENT_PENDING' ,'TD_statuscolor_pen': item.status == 'Partially_cancelled'  }">
-                                    {{ item.status | titlecase }}</span>
-                                <span class="TD_statuscolor" *ngIf=" item.status == 'Booked'">
-                                    Confirmed
-                                </span>
-                            </p>
-                            <p class="code">Booking ID:<span class="TD_ticketdetails"> {{item.id}}</span> </p>
+                            
                         </div>
                         <div class="row top-padding">
                             <div class="col-2">
@@ -61,7 +52,7 @@
                                 <div class="col-8"></div>
                                 <div class="col-4">
                                     <button class="hour" [disabled]="item.status == '' || item.status == 'Pending'">
-                                        Ticket Details
+                                        Booked
                                     </button>
                                 </div>
                             </div>
