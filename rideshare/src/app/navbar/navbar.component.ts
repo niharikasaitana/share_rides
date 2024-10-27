@@ -39,6 +39,11 @@ export class NavbarComponent implements OnInit {
     this.router.navigate(['searchdelievry']);
   }
 
+  logout(){
+    localStorage.clear();
+    this.router.navigate(['home']);
+  }
+
   
 
   loginDataRetrive() {
