@@ -8,14 +8,20 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class RidesComponent implements OnInit {
 
-  currentdata : any;
+  currentdata : any = [];
   constructor(private router: Router) { }
 
   ngOnInit( ): void {
+    this.dataRetrive()
   }
 
   backbutton() {
     this.router.navigate(['home']);
+  }
+
+  dataRetrive(){
+    let ridedata = JSON.parse(localStorage.getItem('placeDetails') || '{}');
+    this.currentdata.push(ridedata);
   }
 
 }

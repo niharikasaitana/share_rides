@@ -1,6 +1,6 @@
 <div class="main_div">
     <app-navbar></app-navbar>
-    
+
     <div class="container">
 
         <div class="row home_row">
@@ -9,24 +9,29 @@
                 <div>
                     <img src="../../assets/backarrow.png" alt="" routerLink="/home" class="backbtn">
                 </div>
-               
 
-                <div class="imgDetails"> 
-                    <img src="../../assets/Auto.svg" alt="" class="vechileImg" *ngIf=" ridedeatils.vechileType == 'AUTO' " >
-                    <img src="../../assets/bike.svg" alt="" class="vechileImg" *ngIf=" ridedeatils.vechileType == 'BIKE' " >
-                    <img src="../../assets/CAB-SEDAN" alt="" class="vechileImg" *ngIf=" ridedeatils.vechileType == 'CAB-SEDAN' " >
-                    <img src="../../assets/Cab.svg" alt="" class="vechileImg" *ngIf=" ridedeatils.vechileType == 'CAB-SUV'">
-                    <span class="detailsVechileType"> {{ ridedeatils.vechileType }} - {{ placedeatils.Adultcount }} passengers
+
+                <div class="imgDetails">
+                    <img src="../../assets/Auto.svg" alt="" class="vechileImg"
+                        *ngIf=" ridedeatils.vechileType == 'AUTO' ">
+                    <img src="../../assets/bike.svg" alt="" class="vechileImg"
+                        *ngIf=" ridedeatils.vechileType == 'BIKE' ">
+                    <img src="../../assets/CAB-SEDAN" alt="" class="vechileImg"
+                        *ngIf=" ridedeatils.vechileType == 'CAB-SEDAN' ">
+                    <img src="../../assets/Cab.svg" alt="" class="vechileImg"
+                        *ngIf=" ridedeatils.vechileType == 'CAB-SUV'">
+                    <span class="detailsVechileType"> {{ ridedeatils.vechileType }} - {{ placedeatils.Adultcount }}
+                        passengers
                         <div class="durationVechile"> {{ ridedeatils.dateTime }} - {{ ridedeatils.Time }} mins </div>
-                         </span>
+                    </span>
                 </div>
 
                 <div class="placeDetails">
-                    <div> 
+                    <div>
                         <span class="placesHeading"> pickup </span>
                         <span class="pickupPlaces"> {{placedeatils.Source}}</span>
                     </div>
-                    <div class="drop_div"> 
+                    <div class="drop_div">
                         <span class="placesHeading"> Drop </span>
                         <span class="pickupPlaces" id="dropplace"> {{ placedeatils.Destination }}</span>
                     </div>
@@ -36,9 +41,11 @@
 
                     <div class="fareheading_div">
                         <span class="fareHeading"> fare </span>
-                        <span class="fare">  ₹ {{ ridedeatils.fare | decmialpipe:2}} 
-                            <img src="../../assets/Whitedown_arrow.svg" alt="" class="arrowImg backbtn" *ngIf="!showbreakup" (click)="showbreakup= true">
-                            <img src="../../assets/Whiteup_arrow.svg" alt="" class="arrowImg backbtn" *ngIf="showbreakup" (click)="showbreakup= false">
+                        <span class="fare"> ₹ {{ ridedeatils.fare | decmialpipe:2}}
+                            <img src="../../assets/Whitedown_arrow.svg" alt="" class="arrowImg backbtn"
+                                *ngIf="!showbreakup" (click)="showbreakup= true">
+                            <img src="../../assets/Whiteup_arrow.svg" alt="" class="arrowImg backbtn"
+                                *ngIf="showbreakup" (click)="showbreakup= false">
                         </span>
                     </div>
                     <div *ngIf="showbreakup">
@@ -47,24 +54,24 @@
                             <span class="farebreakup"> ₹ {{ ridedeatils.fare - 50 | decmialpipe:2}} </span>
                         </div>
                         <div class="farebreakup_div">
-                            <span class="farebreakup_heading" >Tax & Sub Charges</span>
-                            <span class="farebreakup" > ₹ {{ 46 | decmialpipe:2}} </span>
+                            <span class="farebreakup_heading">Tax & Sub Charges</span>
+                            <span class="farebreakup"> ₹ {{ 46 | decmialpipe:2}} </span>
                         </div>
                         <div class="farebreakup_div">
-                            <span  class="farebreakup_heading">Platform Fee</span>
-                            <span class="farebreakup" > ₹ {{ 4 | decmialpipe:2}} </span>
+                            <span class="farebreakup_heading">Platform Fee</span>
+                            <span class="farebreakup"> ₹ {{ 4 | decmialpipe:2}} </span>
                         </div>
                         <hr>
                         <div class="farebreakup_div" id="totalfare">
-                            <span  class="farebreakup_heading" >Total</span>
-                            <span class="farebreakup" > ₹ {{ ridedeatils.fare | decmialpipe:2}} </span>
+                            <span class="farebreakup_heading">Total</span>
+                            <span class="farebreakup"> ₹ {{ ridedeatils.fare | decmialpipe:2}} </span>
                         </div>
                     </div>
 
                 </div>
 
                 <div>
-                    <button type="button" class="btn btnRide"  (click)="bookRide()">
+                    <button type="button" class="btn btnRide" (click)="bookRide()">
                         Book Ride
                     </button>
                 </div>
@@ -75,11 +82,12 @@
 
             <div class="col-md-6">
 
-                <img   class="search_beside_img" alt="" src="https://www.uber-assets.com/image/upload/f_auto,q_auto:eco,c_fill,w_630,h_788/v1684852612/assets/ba/4947c1-b862-400e-9f00-668f4926a4a2/original/Ride-with-Uber.png">
+                <img class="search_beside_img" alt=""
+                    src="https://www.uber-assets.com/image/upload/f_auto,q_auto:eco,c_fill,w_630,h_788/v1684852612/assets/ba/4947c1-b862-400e-9f00-668f4926a4a2/original/Ride-with-Uber.png">
             </div>
-            
+
         </div>
-    </div>        
+    </div>
 </div>
 
 <ng-template #template class="myClass">
@@ -87,42 +95,52 @@
         <div class="popupmain_div">
             <div class="popupheading">
                 Enter your mobile number
-              </div>
-              <div class="popupsubHeading">
+            </div>
+            <div class="popupsubHeading">
                 A 4-digit OTP will be sent on SMS
-              </div>
-              <form [formGroup]="loginForm">
+            </div>
+            <form [formGroup]="loginForm">
 
                 <div class="form-group">
 
-                    <input formControlName="loginNumber" type="text" (keypress)="keyPress($event)"(keydown)="Continue($event)" class="input-fieldplaces" placeholder="Enter Number">
+                    <input formControlName="loginNumber" type="text" (keypress)="keyPress($event)"
+                        (keydown)="Continue($event)" class="input-fieldplaces" placeholder="Enter Number">
 
                 </div>
 
-                <div
-                class="text-danger"
-                *ngIf="
+                <div class="text-danger" *ngIf="
                 this.loginForm.controls['loginNumber'].invalid
                 &&
                 this.loginForm.controls['loginNumber'].touched
-                "
-              >
-                Enter valid 10-digit Number
-              </div>
+                ">
+                    Enter valid 10-digit Number
+                </div>
 
-              <div class="form-group" *ngIf="otpSend">
-                <input type="text" formControlName="otp" placeholder="Enter OTP" class="input-fieldplaces">
-           </div>
+                <div class="form-group" *ngIf="otpSend">
+                    <input type="text" formControlName="otp" placeholder="Enter OTP" class="input-fieldplaces">
+                </div>
 
-               <button type="button" class="btn btnRide" [disabled]="this.loginForm.controls['loginNumber'].invalid" id="popupBtn" (click)="otpSend=true" *ngIf="!otpSend">
-                   Send OTP
-               </button>
-               <button type="button" class="btn btnRide" [disabled]="this.loginForm.controls['loginNumber'].invalid" id="popupBtn" (click)="otpSend=true" *ngIf="otpSend">
-                Register
-            </button>
+                <div class="form-group" *ngIf="register">
+                    <input type="text" formControlName="firstName" placeholder="Enter First Name" class="input-fieldplaces">
+                </div>
 
-              </form>
+                <div class="form-group" *ngIf="register">
+                    <input type="text" formControlName="lastName" placeholder="Enter Last Name" class="input-fieldplaces">
+                </div>
+
+                <button type="button" class="btn btnRide" [disabled]="this.loginForm.controls['loginNumber'].invalid"
+                    id="popupBtn" (click)="otpSend=true" *ngIf="!otpSend">
+                    Send OTP
+                </button>
+                <button type="button" class="btn btnRide" [disabled]="this.loginForm.controls['loginNumber'].invalid"
+                    id="popupBtn" (click)="registercal()" *ngIf="otpSend || register">
+                    <span  *ngIf="!register">  Register </span>
+                    <span  *ngIf="register" (click)="login()">  Login </span>
+                   
+                </button>
+
+            </form>
         </div>
-      
+
     </div>
-  </ng-template>
+</ng-template>

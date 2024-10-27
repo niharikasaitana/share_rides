@@ -17,6 +17,7 @@ export class RidedetailsComponent implements OnInit {
   numberFailed=false;
   otpSend = false;
   modalRef!: BsModalRef;
+  register = false;
   selfconfig = {
     class: 'modal-dialog-centered',
   };
@@ -30,6 +31,8 @@ export class RidedetailsComponent implements OnInit {
     this.loginForm = this.fb.group({
       loginNumber: ['', [Validators.required,Validators.maxLength(10),Validators.minLength(10),Validators.pattern(/^[6-9][0-9]{9}$/)]],
       otp : ['', [Validators.required,Validators.pattern(/^[0-9]{4}$/)]],
+      firstName: ['', [Validators.required,Validators.pattern(/^[A-z]$/),Validators.maxLength(10)]],
+      lastName: ['', [Validators.required,Validators.pattern(/^[A-z]$/),Validators.maxLength(10)]],
     })
   }
 
@@ -42,10 +45,13 @@ export class RidedetailsComponent implements OnInit {
 
   bookRide(){
     
-    let login = JSON.parse(localStorage.getItem('login') ?? '0');
+    let login = JSON.parse(localStorage.getItem('loginDetails') ?? '0');
     if(!login)
     {
       this.openmodal(this.template);
+    }
+    else{
+      
     }
   }
 
@@ -86,6 +92,16 @@ export class RidedetailsComponent implements OnInit {
       this.numberFailed = true;
     }
    
+  }
+
+  registercal(){
+    this.otpSend=true;
+    this.register = true;
+  }
+
+  login(){
+    localStorage.setItem('loginDetails',JSON.stringify(this.loginForm.value));
+    this.modalclose();
   }
 
 }
