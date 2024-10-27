@@ -10,6 +10,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { DatePipe } from '@angular/common';
 import { DecmialpipePipe } from './pipes/decmialpipe.pipe';
 import { RidedetailsComponent } from './ridedetails/ridedetails.component';
+import { RidesComponent } from './rides/rides.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { RidedetailsComponent } from './ridedetails/ridedetails.component';
     HomeComponent,
     NavbarComponent,
     DecmialpipePipe,
-    RidedetailsComponent
+    RidedetailsComponent,
+    RidesComponent
   ],
   imports: [
     BrowserModule,
