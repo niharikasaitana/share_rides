@@ -124,7 +124,7 @@
                     </div>
                     <ng-container *ngFor="let ride of ridesList;let index = index">
                         <div class="ridesCard"
-                        *ngIf="ride.vechileType.toLowerCase() === this.selectedVechile.toLowerCase() && ride.weight.toLowerCase() === this.selectedWeight.toLowerCase()"
+                        *ngIf="ride.vechileType.toLowerCase().includes(this.selectedVechile.toLowerCase()) && ride.weight.toLowerCase() === this.selectedWeight.toLowerCase()"
                             (click)="ridedeatils(index)">
                             <div class="calendImg">
                                 <img src="../../assets/recentcalendar.svg" alt="">

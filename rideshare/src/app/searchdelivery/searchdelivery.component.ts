@@ -40,7 +40,7 @@ export class SearchdeliveryComponent implements OnInit {
     {
       vechileType: 'AUTO',
       fare: 250.00,
-      Time: 120,
+      Time: 110,
       distance: '120km',
       dateTime: '27-01-2024, 12:55PM',
       rating: 4.0,
@@ -50,11 +50,11 @@ export class SearchdeliveryComponent implements OnInit {
     {
       vechileType: 'AUTO',
       fare: 150.00,
-      Time: 120,
+      Time: 60,
       distance: '120km',
       dateTime: '27-01-2024, 12:55PM',
       rating: 4.0,
-      driverName: 'ravi kumar',
+      driverName: 'ravi',
       weight: '20kgs'
     },
     {
@@ -139,6 +139,26 @@ export class SearchdeliveryComponent implements OnInit {
     },
     {
       vechileType: 'CAB-SUV',
+      fare: 350.00,
+      Time: 150,
+      distance: '120km',
+      dateTime: '27-01-2024, 04:55AM',
+      rating: 4.0,
+      weight: '35kgs',
+      driverName: 'Priya'
+    },
+    {
+      vechileType: 'CAB-SUV',
+      fare: 550.00,
+      Time: 90,
+      distance: '120km',
+      dateTime: '27-01-2024, 04:55AM',
+      rating: 4.0,
+      weight: '35kgs',
+      driverName: 'Prakash'
+    },
+    {
+      vechileType: 'CAB-SUV',
       fare: 450.00,
       Time: 120,
       distance: '120km',
@@ -149,7 +169,7 @@ export class SearchdeliveryComponent implements OnInit {
     },
     {
       vechileType: 'BIKE',
-      fare: 150.00,
+      fare: 100.00,
       Time: 20,
       distance: '120km',
       dateTime: '27-01-2024, 18:55PM',
@@ -159,8 +179,28 @@ export class SearchdeliveryComponent implements OnInit {
     },
     {
       vechileType: 'BIKE',
+      fare: 90.00,
+      Time: 30,
+      distance: '120km',
+      dateTime: '27-01-2024, 18:55PM',
+      rating: 3.0,
+      driverName: 'Ravi',
+      weight: '5kgs',
+    },
+    {
+      vechileType: 'BIKE',
+      fare: 100.00,
+      Time: 25,
+      distance: '120km',
+      dateTime: '27-01-2024, 18:55PM',
+      rating: 3.0,
+      driverName: 'Rakesh',
+      weight: '5kgs',
+    },
+    {
+      vechileType: 'BIKE',
       fare: 150.00,
-      Time: 20,
+      Time: 10,
       distance: '120km',
       dateTime: '27-01-2024, 18:55PM',
       rating: 3.0,
@@ -169,8 +209,8 @@ export class SearchdeliveryComponent implements OnInit {
     },
     {
       vechileType: 'BIKE',
-      fare: 150.00,
-      Time: 20,
+      fare: 120.00,
+      Time: 15,
       distance: '120km',
       dateTime: '27-01-2024, 18:55PM',
       rating: 3.0,
@@ -195,12 +235,12 @@ export class SearchdeliveryComponent implements OnInit {
       dateTime: '27-01-2024, 10:55AM',
       rating: 3.5,
       driverName: 'KRISHNA KUMAR',
-      weight: '20 Units'
+      weight: '10 Units'
     },
     {
       vechileType: 'Lorry (Units)',
       fare: 1350.00,
-      Time: 120,
+      Time: 220,
       distance: '120km',
       dateTime: '27-01-2024, 10:55AM',
       rating: 3.5,
@@ -240,6 +280,36 @@ export class SearchdeliveryComponent implements OnInit {
     {
       vechileType: 'Lorry (Tons)',
       fare: 135000.00,
+      Time: 520,
+      distance: '120km',
+      dateTime: '27-01-2024, 10:55AM',
+      rating: 3.5,
+      driverName: 'Rakesh',
+      weight: '25 Tons'
+    },
+    {
+      vechileType: 'Lorry (Tons)',
+      fare: 15000.00,
+      Time: 620,
+      distance: '120km',
+      dateTime: '27-01-2024, 10:55AM',
+      rating: 3.5,
+      driverName: 'Ram',
+      weight: '25 Tons'
+    },
+    {
+      vechileType: 'Lorry (Tons)',
+      fare: 185000.00,
+      Time: 60,
+      distance: '120km',
+      dateTime: '27-01-2024, 10:55AM',
+      rating: 3.5,
+      driverName: 'Rocket ramesh',
+      weight: '25 Tons'
+    },
+    {
+      vechileType: 'Lorry (Tons)',
+      fare: 135000.00,
       Time: 120,
       distance: '120km',
       dateTime: '27-01-2024, 10:55AM',
@@ -265,6 +335,26 @@ export class SearchdeliveryComponent implements OnInit {
       dateTime: '27-01-2024, 10:55AM',
       rating: 3.5,
       driverName: 'Mahesh',
+      weight: '8 Tyre'
+    },
+    {
+      vechileType: 'Lorry (Tyre Type)',
+      fare: 15000.00,
+      Time: 190,
+      distance: '120km',
+      dateTime: '27-01-2024, 10:55AM',
+      rating: 3.5,
+      driverName: 'Rahesh',
+      weight: '8 Tyre'
+    },
+    {
+      vechileType: 'Lorry (Tyre Type)',
+      fare: 18000.00,
+      Time: 100,
+      distance: '120km',
+      dateTime: '27-01-2024, 10:55AM',
+      rating: 3.5,
+      driverName: 'Rahul',
       weight: '8 Tyre'
     },
     {
