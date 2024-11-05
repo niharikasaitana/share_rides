@@ -1,1 +1,184 @@
-<p>searchdelivery works!</p>
+<div class="main_div">
+    <app-navbar></app-navbar>
+
+    <div class="container">
+
+        <div class="row home_row">
+
+            <div class="col-md-6">
+
+                <div class="search_div">
+
+                    <h2 class="goHeading">
+                        Delivery To AnyWhere
+
+                        <div class="subHeading">
+                            With US
+                        </div>
+                    </h2>
+
+                    <form [formGroup]="homeForm">
+
+
+                        <div class="source form-group source-feild">
+                            <input type="text" placeholder=" Source " class="input-fieldplaces" formControlName="Source"
+                                (keyup)="searchResult($event,'source')" value="selectedSource">
+
+
+                        </div>
+                        <div class="searchTypehead" *ngIf="sourceTouched">
+                            <ul *ngFor="let source of sortedList">
+                                <li (click)=" selectionCall(source,'source')">{{source}}</li>
+                            </ul>
+                        </div>
+
+                        <div class="destination-feild form-group">
+                            <input type="text" placeholder=" Destination " class="input-fieldplaces"
+                                formControlName="Destination" (keyup)="searchResult($event,'destination')">
+
+                        </div>
+                        <div class="searchTypehead" *ngIf="destinationTouched">
+                            <ul *ngFor="let destination of sortedList">
+                                <li (click)=" selectionCall(destination,'destination')">{{destination}}</li>
+                            </ul>
+                        </div>
+
+                        <div class="row">
+                            <div class="feildHeading">
+                                Travelling Date
+                            </div>
+                            <div class="destination-feild form-group " id="datefeild">
+                                <input type="date" [(ngModel)]="minDate" class="input-fieldplaces"
+                                    formControlName="startdate">
+
+
+
+                            </div>
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col-md-6">
+                                <div class="feildHeading" id="pas">
+                                    vechileType
+                                </div>
+
+                                <select formControlName="vechileType" class="destination-feild form-group " id="select">
+                                    <option *ngFor="let option of vechilesList" [value]="option">{{ option }}</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-6">
+
+                                <div class="feildHeading" id="deliveryheading">
+                                    Delivery Weight
+                                    <span
+                                        *ngIf=" this.homeForm.get('vechileType')?.value == 'Bike' || this.homeForm.get('vechileType')?.value == 'Cab' || this.homeForm.get('vechileType')?.value == 'Auto'  ">
+                                        - Kgs </span>
+                                    <span *ngIf=" this.homeForm.get('vechileType')?.value == 'Lorry (Units)' "> - Units
+                                    </span>
+                                    <span *ngIf=" this.homeForm.get('vechileType')?.value == 'Lorry (Tons)' "> - Tons
+                                    </span>
+                                    <span *ngIf=" this.homeForm.get('vechileType')?.value == 'Lorry (Tyre Type)' "> -
+                                        Tyre Type </span>
+                                </div>
+                                <div class="destination-feild form-group " id="passengerfeild">
+                                    <input type="number" class="input-fieldplaces" formControlName="deliveryWight">
+
+
+
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btnRide" [disabled]=this.homeForm.invalid
+                                (click)="getRides()">
+                                Book {{this.homeForm.get('vechileType')?.value}}
+                            </button>
+
+                        </div>
+
+
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+
+                <img *ngIf="!showRides" class="search_beside_img" alt=""
+                    src="https://www.uber-assets.com/image/upload/f_auto,q_auto:eco,c_fill,w_630,h_788/v1684852612/assets/ba/4947c1-b862-400e-9f00-668f4926a4a2/original/Ride-with-Uber.png">
+
+                <div *ngIf="showRides">
+
+                    <div class="fliterdiv">
+
+                        <button type="button" class="fliter"
+                            [ngClass]="{' selectedfilter': selectedFliter == 'cheaper' }" (click)="fliter('cheaper')">
+                            cheaper </button>
+                        <button type="button" class="fliter "
+                            [ngClass]="{' selectedfilter': selectedFliter == 'faster' }" (click)="fliter('faster')">
+                            Faster </button>
+                        <button type="button" class="fliter "
+                            [ngClass]="{' selectedfilter': selectedFliter == 'Convenice' }"
+                            (click)="fliter('convenice')"> Convenice </button>
+
+                    </div>
+                    <ng-container *ngFor="let ride of ridesList;let index = index">
+                        <div class="ridesCard"
+                        *ngIf="ride.vechileType.toLowerCase() === this.selectedVechile.toLowerCase() && ride.weight.toLowerCase() === this.selectedWeight.toLowerCase()"
+                            (click)="ridedeatils(index)">
+                            <div class="calendImg">
+                                <img src="../../assets/recentcalendar.svg" alt="">
+                                <span> {{ride.dateTime}} - </span>
+                                <span class="weight"> {{ride.weight}} </span>
+                            </div>
+                            <div class="ridedeatils">
+
+                                <span class="detailsspan1">
+                                    <img src="../../assets/Auto.svg" alt="" *ngIf=" ride.vechileType == 'AUTO' "
+                                        class="vechileImg">
+                                    <img src="../../assets/bike.svg" alt="" *ngIf=" ride.vechileType == 'BIKE' "
+                                        class="vechileImg">
+                                    <img src="../../assets/Cab.svg" alt=""
+                                        *ngIf=" ride.vechileType != 'BIKE' &&  ride.vechileType != 'AUTO' "
+                                        class="vechileImg">
+
+                                </span>
+                                <span> {{ride.Time}} Mins</span>
+                                <span class="detailsspan2"> ₹ {{ride.fare | decmialpipe:2}} </span>
+                            </div>
+                            <hr>
+                            <div *ngIf="  ride.vechileType == 'BIKE'  ||  ride.vechileType == 'AUTO' "
+                                class="bikevechile">
+                                {{ride.vechileType}}
+                                <img src="../../assets/driver_black.png" alt="" class="direverImg">
+                                <span class="direverName"> {{ride.driverName | titlecase }}</span>
+
+                                <span class="star_sapn">
+                                    <img src="../../assets/star.png" alt="" class="starimg">
+                                    <span class="direverName"> {{ride.rating | decmialpipe:2 }}</span>
+                                </span>
+
+
+                            </div>
+                            <div class="div_vechiletpe"
+                                *ngIf="  ride.vechileType != 'BIKE' &&  ride.vechileType != 'AUTO' ">
+                                {{ride.vechileType}}
+                                <img src="../../assets/driver_black.png" alt="" class="direverImg">
+                                <span class="direverName"> {{ride.driverName | titlecase }}</span>
+
+                                <span class="star_sapn">
+                                    <img src="../../assets/star.png" alt="" class="starimg">
+                                    <span class="direverName"> {{ride.rating | decmialpipe:2 }}</span>
+                                </span>
+
+                            </div>
+                        </div>
+                    </ng-container>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

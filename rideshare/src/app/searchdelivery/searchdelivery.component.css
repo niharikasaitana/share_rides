@@ -1,0 +1,254 @@
+.search_beside_img {
+    height: 550px;
+  }
+  
+  .home_row {
+    margin-top: 5%;
+  }
+  
+  
+  .input-fieldplaces {
+    width: 84%;
+    outline: none;
+    border: none;
+    border-radius: 11px;
+    color: #000088;
+    text-indent: 10px;
+    font-family: "PoopinRegular";
+    margin-top: 14px;
+    position: relative;
+    z-index: 4;
+  }
+  
+  
+  .destination-feild {
+    height: 53px;
+    border: 1px solid rgba(1, 17, 48, 0.23);
+    border-radius: 11px;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: -2%;
+    background-position: 10px;
+    /* new */
+    background: #ffffff;
+    border: 1px solid #ececec;
+    box-shadow: 0px -2px 4px rgba(195, 195, 195, 0.25),
+      0px 4px 4px rgba(195, 195, 195, 0.25);
+    border-radius: 5px;
+    margin-top: 5%;
+    width: 90%;
+    margin-left: 2%;
+  }
+  
+  #select{
+    margin-left: 6%;
+  }
+  
+  .source-feild {
+    height: 52px;
+    border: 1px solid rgba(1, 17, 48, 0.23);
+    border-radius: 11px;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 3%;
+    background-position: 10px;
+    /*new*/
+    background: #ffffff;
+    border: 1px solid #ececec;
+    box-shadow: 0px -2px 4px rgba(195, 195, 195, 0.25),
+      0px 4px 4px rgba(195, 195, 195, 0.25);
+    border-radius: 5px;
+    width: 90%;
+    margin-left: 2%;
+  }
+  
+  .goHeading {
+    font-family: "PoopinBold";
+    font-size: 23px;
+    text-align: center;
+  }
+  
+  .feildHeading {
+    font-family: "PoopinMedium";
+    margin-top: 5%;
+    font-size: 16px;
+    text-align: left;
+    margin-left: 5%;
+  }
+  
+  #pas {
+    margin-left: 13%;
+  }
+  
+  .subHeading {
+    font-size: 18px;
+    margin-top: 1%;
+    margin-bottom: 3%;
+    margin-left: 13%;
+  }
+  
+  #datefeild {
+    width: 85%;
+    margin-left: 5%;
+  }
+  
+  #passengerfeild {
+    width: 82%;
+
+  }
+  
+  .btnRide {
+    margin-top: 5%;
+    height: 50px;
+    text-align: center;
+    font-family: "PoopinRegular";
+    width: 60%;
+    border: 3px solid black;
+    margin-left: 20%;
+    background-color: black;
+    color: white;
+  }
+  
+  .passCount {
+    text-align: center;
+  }
+  
+  .searchTypehead {
+    background: #d3d3d3f7;
+    max-height: 250px;
+    position: absolute;
+    z-index: 5;
+    overflow-y: scroll;
+    width: 30%;
+    margin-left: 0.5%;
+  }
+  
+  li {
+    cursor: pointer;
+  }
+  
+  .btnRide:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .ridesCard {
+    background: #ffffff;
+    border: 1px solid #ececec;
+    box-shadow: 0px -2px 4px rgba(195, 195, 195, 0.25), 0px 4px 4px rgba(195, 195, 195, 0.25);
+    border-radius: 5px;
+    font-family: "PoopinMedium";
+    margin-top: 5%;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .ridesCard:hover {
+    border: 1px solid black;
+    transform: scale(1.05) translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .ridedeatils {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4%;
+  }
+  
+  .detailsspan1 {
+    margin-left: 3%;
+    width: 10%;
+  }
+  
+  .detailsspan2 {
+    margin-right: 5%;
+    color: #000088;
+  }
+  
+  .calendImg {
+    margin-left: 5%;
+    margin-top: 2%;
+    color: #000088;
+  }
+  
+  .vechileImg {
+    color: black;
+    margin-left: 5%;
+    margin-top: -16%;
+  }
+  
+  .div_vechiletpe {
+    margin-left: 5%;
+    font-size: 14px;
+    margin-bottom: 2%;
+    font-weight: 600;
+  
+  }
+  
+  .bikevechile {
+    margin-left: 7%;
+    font-size: 14px;
+    margin-left: 6%;
+    margin-bottom: 2%;
+    font-weight: 600;
+  
+  }
+  
+  svg {
+    fill: red;
+  }
+  
+  .fliterdiv {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3%;
+    margin-bottom: 2%;
+  }
+  
+  .selectedfilter {
+    border: none !important;
+    color: #fff !important;
+    background: black !important;
+    font-family: PoopinSemibold !important;
+  }
+  
+  .fliter {
+    height: 50px;
+    font-size: 15px;
+    width: 30%;
+    border: .5px solid black;
+    background: white;
+    color: black;
+    font-family: PoopinMedium;
+    border-radius: 8px;
+  }
+  
+  .direverImg {
+  
+    width: 50px;
+  }
+  
+  .direverName {
+    color: gray;
+  }
+  
+  .starimg {
+    width: 31px;
+    height: 35px;
+  }
+  
+  .star_sapn {
+    float: right;
+    margin-right: 5%;
+  }
+  
+  .fliterImg {
+    background: white;
+    border: 1px solid black;
+    border-radius: 10px;
+  }
+
+  .weight{
+    font-weight: 600;
+    color: black;
+  }
