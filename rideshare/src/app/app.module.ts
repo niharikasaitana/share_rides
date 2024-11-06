@@ -14,6 +14,7 @@ import { RidesComponent } from './rides/rides.component';
 import { PublishrideComponent } from './publishride/publishride.component';
 import { ShipmentsComponent } from './shipments/shipments.component';
 import { SearchdeliveryComponent } from './searchdelivery/searchdelivery.component';
+import { DeliverydetailsComponent } from './deliverydetails/deliverydetails.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { SearchdeliveryComponent } from './searchdelivery/searchdelivery.compone
     RidesComponent,
     PublishrideComponent,
     ShipmentsComponent,
-    SearchdeliveryComponent
+    SearchdeliveryComponent,
+    DeliverydetailsComponent
   ],
   imports: [
     BrowserModule,

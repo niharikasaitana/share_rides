@@ -1,0 +1,188 @@
+.home_row {
+    margin-top: 5%;
+}
+
+.imgDetails {
+    display: flex;
+    justify-content: center;
+}
+
+.detailsVechileType {
+    font-family: "PoopinMedium";
+}
+
+.durationVechile {
+    font-size: 11px;
+    font-family: "PoopinBold";
+}
+
+.vechileImg {
+    margin-top: -2%;
+    width: 65px;
+
+}
+
+.placesHeading {
+    font-size: 15px;
+    font-family: "PoopinRegular";
+    color: #898989;
+}
+
+.pickupPlaces {
+    font-size: 17px;
+    font-family: "PoopinMedium";
+    margin-left: 5%;
+    border: 1px solid #898989;
+    border-radius: 10px;
+    height: 50px;
+    display: inline-block;
+    text-align: center;
+    width: 450px;
+    line-height: 47px;
+}
+
+.placeDetails {
+    margin-top: 5%;
+}
+
+.drop_div{
+    margin-top: 5%;
+}
+
+#dropplace{
+    margin-left: 7%;
+}
+
+.fare_div{
+    border-radius: 5px;
+    border: 1px solid #898989;
+    font-family: "PoopinMedium";
+    margin-top: 5%;
+    width: 84%;
+}
+
+.fareheading_div{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.fare{
+    margin-left: 5%;
+    margin-right: 2%;
+}
+
+.fareHeading{
+    margin-left: 2%;
+    color: #898989;
+}
+
+.farebreakup_div{
+    margin-top: 2%;
+    display: flex;
+    justify-content: space-between;
+    color: #000088cf;
+    font-size: 13px;
+}
+
+.farebreakup_heading{
+    margin-left: 2%;
+}
+
+.farebreakup{
+    margin-right: 5%;
+    font-family: "PoopinRegular";
+}
+
+#totalfare{
+    color: #028353;
+    margin-bottom: 2%;
+    font-size: 15px;
+    font-family: "PoopinMedium" !important;
+}
+
+hr{
+    width: 95%;
+    margin-left: 2%;
+}
+
+.btnRide {
+    margin-top: 5%;
+    height: 50px;
+    margin-left: 25%;
+    text-align: center;
+    font-family: "PoopinRegular";
+    border: 3px solid black;
+    background-color: black;
+    color: white;
+    width: 45%;
+  }
+
+  .search_beside_img {
+    height: 550px;
+  }
+
+  .backbtn{
+    cursor: pointer;
+  }
+
+  .popupmain_div{
+    text-align: center;
+  }
+
+  .popupheading{
+    font-family: "PoopinBold";
+    margin-top: 2%;
+  }
+
+  .popupsubHeading{
+    font-family: "PoopinRegular";
+    color: #898989;
+    font-size: 10px;
+  }
+
+  .input-fieldplaces {
+    outline: none;
+    border-radius: 5px;
+    color: #000088;
+    text-indent: 10px;
+    font-family: "PoopinRegular";
+    z-index: 4;
+    margin-top: 5%;
+    margin-bottom: 2%;
+  }
+
+  .input-fieldplaces ::placeholder{
+    font-size: 9px;
+    font-family: "PoopinRegular";
+  }
+
+  .text-danger {
+    font-family: "PoopinSemibold";
+    font-size: 14px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+  }
+
+ #popupBtn{
+    margin-left: 0%;
+    margin-bottom: 5%;
+ }
+
+ .img_success{
+    margin-top: 5%;
+ }
+
+ .btnRidepopup{
+    margin-top: 4%;
+    border-radius: 5px;
+    height: 50px;
+    margin-left: 1%;
+    text-align: center;
+    font-family: "PoopinRegular";
+    background-color: black;
+    color: white;
+    width: 42%;
+    margin-bottom: 4%;
+ }

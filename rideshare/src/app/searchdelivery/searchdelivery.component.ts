@@ -465,7 +465,7 @@ export class SearchdeliveryComponent implements OnInit {
   }
 
   ridedeatils(index: number) {
-    localStorage.setItem('rideDetails', JSON.stringify(this.ridesList[index]));
-    this.router.navigateByUrl('ridedetails');
+    localStorage.setItem('deliverydetails', JSON.stringify(this.ridesList[index]));
+    this.router.navigateByUrl('deliverydetails');
   }
 }

@@ -7,6 +7,7 @@ import { RidesComponent } from './rides/rides.component';
 import { PublishrideComponent } from './publishride/publishride.component';
 import { ShipmentsComponent } from './shipments/shipments.component';
 import { SearchdeliveryComponent } from './searchdelivery/searchdelivery.component';
+import { DeliverydetailsComponent } from './deliverydetails/deliverydetails.component';
 
 
 const routes: Routes = [
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: 'publishride', component: PublishrideComponent},
   { path:'shippments', component: ShipmentsComponent},
   { path :'searchdelievry', component: SearchdeliveryComponent},
+  { path:'deliverydetails', component: DeliverydetailsComponent},
   { path: '**', redirectTo: '', pathMatch: 'full' }
 ];
 

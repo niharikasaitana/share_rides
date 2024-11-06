@@ -7,7 +7,7 @@
 
             <div class="col-md-6">
                 <div>
-                    <img src="../../assets/backarrow.png" alt="" routerLink="/home" class="backbtn">
+                    <img src="../../assets/backarrow.png" alt="" routerLink="/searchdelievry" class="backbtn">
                 </div>
 
 
@@ -17,11 +17,9 @@
                     <img src="../../assets/bike.svg" alt="" class="vechileImg"
                         *ngIf=" ridedeatils.vechileType == 'BIKE' ">
                     <img src="../../assets/CAB-SEDAN" alt="" class="vechileImg"
-                        *ngIf=" ridedeatils.vechileType == 'CAB-SEDAN' ">
-                    <img src="../../assets/Cab.svg" alt="" class="vechileImg"
-                        *ngIf=" ridedeatils.vechileType == 'CAB-SUV'">
-                    <span class="detailsVechileType"> {{ ridedeatils.vechileType }} - {{ placedeatils.Adultcount }}
-                        passengers
+                        *ngIf=" ridedeatils.vechileType.toLowerCase() == 'cab' ">
+                   
+                    <span class="detailsVechileType"> {{ ridedeatils.vechileType }} - {{ ridedeatils.weight }}
                         <div class="durationVechile"> {{ ridedeatils.dateTime }} - {{ ridedeatils.Time }} mins </div>
                     </span>
                 </div>
@@ -72,7 +70,7 @@
 
                 <div>
                     <button type="button" class="btn btnRide" (click)="bookRide()">
-                        Book Ride
+                        Book Service
                     </button>
                 </div>
 
@@ -82,8 +80,7 @@
 
             <div class="col-md-6">
 
-                <img class="search_beside_img" alt=""
-                    src="https://www.uber-assets.com/image/upload/f_auto,q_auto:eco,c_fill,w_630,h_788/v1684852612/assets/ba/4947c1-b862-400e-9f00-668f4926a4a2/original/Ride-with-Uber.png">
+                <img   class="search_beside_img" alt="" src="../../assets/share_rides_blue.jpg"> 
             </div>
 
         </div>
