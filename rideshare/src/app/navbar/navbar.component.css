@@ -592,7 +592,7 @@
     margin-left: -4%;
   }
   
-  :host /deep/ .mat-select-value {
+  :host ::ng-deep .mat-select-value {
     color: #008 !important;
     text-indent:11px;
     font-size: 14px;
@@ -600,11 +600,11 @@
   
   /**/
   
-  :host /deep/ .mat-select-placeholder {
+  :host ::ng-deep .mat-select-placeholder {
     color: #008 !important;
   }
   
-  :host /deep/ .mat-select-arrow {
+  :host ::ng-deep .mat-select-arrow {
     color: #008;
     margin-right: 16px;
   }
@@ -613,7 +613,7 @@
     max-width:310px !important;
     margin-left: 15px;
   }
-  :host /deep/ .cdk-overlay-pane{
+  :host ::ng-deep .cdk-overlay-pane{
     min-width: 310.988px;
       margin-left: 12px;
       font-size: 14px;
